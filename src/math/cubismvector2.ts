@@ -10,8 +10,6 @@
  *
  * 2次元ベクトル型の機能を提供する。
  */
-// Namespace definition for compatibility.
-import * as $ from './cubismvector2';
 
 export class CubismVector2 {
   /**
@@ -161,9 +159,4 @@ export class CubismVector2 {
   public isNotEqual(rhs: CubismVector2): boolean {
     return !this.isEqual(rhs);
   }
-}
-// eslint-disable-next-line @typescript-eslint/no-namespace
-export namespace Live2DCubismFramework {
-  export const CubismVector2 = $.CubismVector2;
-  export type CubismVector2 = $.CubismVector2;
 }

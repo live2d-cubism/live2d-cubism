@@ -5,9 +5,6 @@
  * that can be found at https://www.live2d.com/eula/live2d-open-software-license-agreement_en.html.
  */
 
-// Namespace definition for compatibility.
-import * as $ from './cubismstring';
-
 export class CubismString {
   /**
    * 標準出力の書式を適用した文字列を取得する。
@@ -121,9 +118,4 @@ export class CubismString {
    * コンストラクタ呼び出し不可な静的クラスにする。
    */
   private constructor() {}
-}
-// eslint-disable-next-line @typescript-eslint/no-namespace
-export namespace Live2DCubismFramework {
-  export const CubismString = $.CubismString;
-  export type CubismString = $.CubismString;
 }

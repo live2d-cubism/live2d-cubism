@@ -13,8 +13,6 @@ import { CubismJson, Value } from '../utils/cubismjson';
 import { ACubismMotion } from './acubismmotion';
 import { CubismMotionQueueEntry } from './cubismmotionqueueentry';
 
-// Namespace definition for compatibility.
-import * as $ from './cubismexpressionmotion';
 
 // exp3.jsonのキーとデフォルト
 const ExpressionKeyFadeIn = 'FadeInTime';
@@ -187,13 +185,4 @@ export class ExpressionParameter {
   parameterId: CubismIdHandle; // パラメータID
   blendType: ExpressionBlendType; // パラメータの演算種類
   value: number; // 値
-}
-// eslint-disable-next-line @typescript-eslint/no-namespace
-export namespace Live2DCubismFramework {
-  export const CubismExpressionMotion = $.CubismExpressionMotion;
-  export type CubismExpressionMotion = $.CubismExpressionMotion;
-  export const ExpressionBlendType = $.ExpressionBlendType;
-  export type ExpressionBlendType = $.ExpressionBlendType;
-  export const ExpressionParameter = $.ExpressionParameter;
-  export type ExpressionParameter = $.ExpressionParameter;
 }

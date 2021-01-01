@@ -8,9 +8,6 @@
 import { csmMap, iterator } from '../type/csmmap';
 import { CubismMatrix44 } from './cubismmatrix44';
 
-// Namespace definition for compatibility.
-import * as $ from './cubismmodelmatrix';
-
 /**
  * モデル座標設定用の4x4行列
  *
@@ -218,9 +215,4 @@ export class CubismModelMatrix extends CubismMatrix44 {
 
   private _width: number; // 横幅
   private _height: number; // 縦幅
-}
-// eslint-disable-next-line @typescript-eslint/no-namespace
-export namespace Live2DCubismFramework {
-  export const CubismModelMatrix = $.CubismModelMatrix;
-  export type CubismModelMatrix = $.CubismModelMatrix;
 }

@@ -18,9 +18,6 @@ import {
   CubismTextureColor
 } from './cubismrenderer';
 
-// Namespace definition for compatibility.
-import * as $ from './cubismrenderer_webgl';
-
 const ColorChannelCount = 4; // 実験時に1チャンネルの場合は1、RGBだけの場合は3、アルファも含める場合は4
 
 const shaderCount = 10; // シェーダーの数 = マスク生成用 + (通常用 + 加算 + 乗算) * (マスク無の乗算済アルファ対応版 + マスク有の乗算済アルファ対応版 + マスク有反転の乗算済アルファ対応版)
@@ -2203,20 +2200,4 @@ export class CubismRenderer_WebGL extends CubismRenderer {
 CubismRenderer.staticRelease = (): void => {
   CubismRenderer_WebGL.doStaticRelease();
 };
-// eslint-disable-next-line @typescript-eslint/no-namespace
-export namespace Live2DCubismFramework {
-  export const CubismClippingContext = $.CubismClippingContext;
-  export type CubismClippingContext = $.CubismClippingContext;
-  export const CubismClippingManager_WebGL = $.CubismClippingManager_WebGL;
-  export type CubismClippingManager_WebGL = $.CubismClippingManager_WebGL;
-  export const CubismRenderTextureResource = $.CubismRenderTextureResource;
-  export type CubismRenderTextureResource = $.CubismRenderTextureResource;
-  export const CubismRenderer_WebGL = $.CubismRenderer_WebGL;
-  export type CubismRenderer_WebGL = $.CubismRenderer_WebGL;
-  export const CubismShaderSet = $.CubismShaderSet;
-  export type CubismShaderSet = $.CubismShaderSet;
-  export const CubismShader_WebGL = $.CubismShader_WebGL;
-  export type CubismShader_WebGL = $.CubismShader_WebGL;
-  export const ShaderNames = $.ShaderNames;
-  export type ShaderNames = $.ShaderNames;
-}
+

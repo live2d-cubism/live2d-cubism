@@ -7,9 +7,6 @@
 
 import { csmString } from '../type/csmstring';
 
-// Namespace definition for compatibility.
-import * as $ from './cubismid';
-
 /**
  * パラメータ名・パーツ名・Drawable名を保持
  *
@@ -71,9 +68,3 @@ export class CubismId {
 }
 
 export declare type CubismIdHandle = CubismId;
-// eslint-disable-next-line @typescript-eslint/no-namespace
-export namespace Live2DCubismFramework {
-  export const CubismId = $.CubismId;
-  export type CubismId = $.CubismId;
-  export type CubismIdHandle = $.CubismIdHandle;
-}

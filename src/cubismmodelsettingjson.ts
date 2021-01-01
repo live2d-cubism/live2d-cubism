@@ -12,9 +12,6 @@ import { csmMap, iterator } from './type/csmmap';
 import { csmVector } from './type/csmvector';
 import { CubismJson, Value } from './utils/cubismjson';
 
-// Namespace definition for compatibility.
-import * as $ from './cubismmodelsettingjson';
-
 /**
  * Model3Jsonのキー文字列
  */
@@ -822,9 +819,4 @@ export class CubismModelSettingJson extends ICubismModelSetting {
 
   private _json: CubismJson;
   private _jsonValue: csmVector<Value>;
-}
-// eslint-disable-next-line @typescript-eslint/no-namespace
-export namespace Live2DCubismFramework {
-  export const CubismModelSettingJson = $.CubismModelSettingJson;
-  export type CubismModelSettingJson = $.CubismModelSettingJson;
 }

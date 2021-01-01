@@ -11,9 +11,6 @@ import { csmString } from '../type/csmstring';
 import { csmVector, iterator as csmVector_iterator } from '../type/csmvector';
 import { CubismLogInfo } from './cubismdebug';
 
-// Namespace definition for compatibility.
-import * as $ from './cubismjson';
-
 // StaticInitializeNotForClientCall()で初期化する
 const CSM_JSON_ERROR_TYPE_MISMATCH = 'Error: type mismatch';
 const CSM_JSON_ERROR_INDEX_OF_BOUNDS = 'Error: index out of bounds';
@@ -1229,25 +1226,4 @@ export class JsonMap extends Value {
 
   private _map: csmMap<string, Value>; // JSON要素の値
   private _keys: csmVector<string>; // JSON要素の値
-}
-// eslint-disable-next-line @typescript-eslint/no-namespace
-export namespace Live2DCubismFramework {
-  export const CubismJson = $.CubismJson;
-  export type CubismJson = $.CubismJson;
-  export const JsonArray = $.JsonArray;
-  export type JsonArray = $.JsonArray;
-  export const JsonBoolean = $.JsonBoolean;
-  export type JsonBoolean = $.JsonBoolean;
-  export const JsonError = $.JsonError;
-  export type JsonError = $.JsonError;
-  export const JsonFloat = $.JsonFloat;
-  export type JsonFloat = $.JsonFloat;
-  export const JsonMap = $.JsonMap;
-  export type JsonMap = $.JsonMap;
-  export const JsonNullvalue = $.JsonNullvalue;
-  export type JsonNullvalue = $.JsonNullvalue;
-  export const JsonString = $.JsonString;
-  export type JsonString = $.JsonString;
-  export const Value = $.Value;
-  export type Value = $.Value;
 }

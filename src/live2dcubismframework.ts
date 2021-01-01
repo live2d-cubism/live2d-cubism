@@ -14,9 +14,6 @@ import {
 } from './utils/cubismdebug';
 import { Value } from './utils/cubismjson';
 
-// Namespace definition for compatibility.
-import * as $ from './live2dcubismframework';
-
 export function strtod(s: string, endPtr: string[]): number {
   let index = 0;
   for (let i = 1; ; i++) {
@@ -267,11 +264,4 @@ export enum LogLevel {
   LogLevel_Warning, // 警告ログ
   LogLevel_Error, // エラーログ
   LogLevel_Off // ログ出力無効
-}
-// eslint-disable-next-line @typescript-eslint/no-namespace
-export namespace Live2DCubismFramework {
-  export const Constant = $.Constant;
-  export const csmDelete = $.csmDelete;
-  export const CubismFramework = $.CubismFramework;
-  export type CubismFramework = $.CubismFramework;
 }

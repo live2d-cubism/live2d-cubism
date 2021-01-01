@@ -11,8 +11,6 @@
  * メモリ確保・解放処理をプラットフォーム側で実装して
  * フレームワークから呼び出すためのインターフェース
  */
-// Namespace definition for compatibility.
-import * as $ from './icubismallcator';
 
 export abstract class ICubismAllocator {
   /**
@@ -43,9 +41,4 @@ export abstract class ICubismAllocator {
    * @param alignedMemory 解放するメモリのアドレス
    */
   public abstract deallocateAligned(alignedMemory: any): void;
-}
-// eslint-disable-next-line @typescript-eslint/no-namespace
-export namespace Live2DCubismFramework {
-  export const ICubismAllocator = $.ICubismAllocator;
-  export type ICubismAllocator = $.ICubismAllocator;
 }

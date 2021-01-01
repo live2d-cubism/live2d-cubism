@@ -11,8 +11,6 @@ import { csmVector, iterator } from '../type/csmvector';
 import { CubismModel } from '../model/cubismmodel';
 import { csmString } from '../type/csmstring';
 
-// Namespace definition for compatibility.
-import * as $ from './cubismmotionqueuemanager';
 
 /**
  * モーション再生の管理
@@ -338,12 +336,4 @@ export interface CubismMotionEventFunction {
  */
 export declare type CubismMotionQueueEntryHandle = any;
 export const InvalidMotionQueueEntryHandleValue: CubismMotionQueueEntryHandle = -1;
-// eslint-disable-next-line @typescript-eslint/no-namespace
-export namespace Live2DCubismFramework {
-  export const CubismMotionQueueManager = $.CubismMotionQueueManager;
-  export type CubismMotionQueueManager = $.CubismMotionQueueManager;
-  export const InvalidMotionQueueEntryHandleValue =
-    $.InvalidMotionQueueEntryHandleValue;
-  export type CubismMotionQueueEntryHandle = $.CubismMotionQueueEntryHandle;
-  export type CubismMotionEventFunction = $.CubismMotionEventFunction;
-}
+

@@ -7,9 +7,6 @@
 
 import { CubismMatrix44 } from './cubismmatrix44';
 
-// Namespace definition for compatibility.
-import * as $ from './cubismviewmatrix';
-
 /**
  * カメラの位置変更に使うと便利な4x4行列
  *
@@ -331,9 +328,4 @@ export class CubismViewMatrix extends CubismMatrix44 {
   private _maxBottom: number; // 論理座標上の移動可能範囲（下辺Y軸位置）
   private _maxScale: number; // 拡大率の最大値
   private _minScale: number; // 拡大率の最小値
-}
-// eslint-disable-next-line @typescript-eslint/no-namespace
-export namespace Live2DCubismFramework {
-  export const CubismViewMatrix = $.CubismViewMatrix;
-  export type CubismViewMatrix = $.CubismViewMatrix;
 }

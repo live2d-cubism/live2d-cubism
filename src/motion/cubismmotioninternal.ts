@@ -9,9 +9,6 @@ import { CubismIdHandle } from '../id/cubismid';
 import { csmString } from '../type/csmstring';
 import { csmVector } from '../type/csmvector';
 
-// Namespace definition for compatibility.
-import * as $ from './cubismmotioninternal';
-
 /**
  * @brief モーションカーブの種類
  *
@@ -135,22 +132,4 @@ export class CubismMotionData {
   segments: csmVector<CubismMotionSegment>; // セグメントのリスト
   points: csmVector<CubismMotionPoint>; // ポイントのリスト
   events: csmVector<CubismMotionEvent>; // イベントのリスト
-}
-// eslint-disable-next-line @typescript-eslint/no-namespace
-export namespace Live2DCubismFramework {
-  export const CubismMotionCurve = $.CubismMotionCurve;
-  export type CubismMotionCurve = $.CubismMotionCurve;
-  export const CubismMotionCurveTarget = $.CubismMotionCurveTarget;
-  export type CubismMotionCurveTarget = $.CubismMotionCurveTarget;
-  export const CubismMotionData = $.CubismMotionData;
-  export type CubismMotionData = $.CubismMotionData;
-  export const CubismMotionEvent = $.CubismMotionEvent;
-  export type CubismMotionEvent = $.CubismMotionEvent;
-  export const CubismMotionPoint = $.CubismMotionPoint;
-  export type CubismMotionPoint = $.CubismMotionPoint;
-  export const CubismMotionSegment = $.CubismMotionSegment;
-  export type CubismMotionSegment = $.CubismMotionSegment;
-  export const CubismMotionSegmentType = $.CubismMotionSegmentType;
-  export type CubismMotionSegmentType = $.CubismMotionSegmentType;
-  export type csmMotionSegmentEvaluationFunction = $.csmMotionSegmentEvaluationFunction;
 }

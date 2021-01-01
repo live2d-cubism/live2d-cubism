@@ -25,9 +25,6 @@ import { CubismMoc } from './cubismmoc';
 import { CubismModel } from './cubismmodel';
 import { CubismModelUserData } from './cubismmodeluserdata';
 
-// Namespace definition for compatibility.
-import * as $ from './cubismusermodel';
-
 /**
  * ユーザーが実際に使用するモデル
  *
@@ -432,9 +429,4 @@ export class CubismUserModel {
   protected _debugMode: boolean; // デバッグモードかどうか
 
   private _renderer: CubismRenderer_WebGL; // レンダラ
-}
-// eslint-disable-next-line @typescript-eslint/no-namespace
-export namespace Live2DCubismFramework {
-  export const CubismUserModel = $.CubismUserModel;
-  export type CubismUserModel = $.CubismUserModel;
 }

@@ -9,8 +9,6 @@ import { CubismIdHandle } from '../id/cubismid';
 import { CubismVector2 } from '../math/cubismvector2';
 import { csmVector } from '../type/csmvector';
 
-// Namespace definition for compatibility.
-import * as $ from './cubismphysicsinternal';
 
 /**
  * 物理演算の適用先の種類
@@ -221,29 +219,4 @@ export class CubismPhysicsRig {
   gravity: CubismVector2; // 重力
   wind: CubismVector2; // 風
 }
-// eslint-disable-next-line @typescript-eslint/no-namespace
-export namespace Live2DCubismFramework {
-  export const CubismPhysicsInput = $.CubismPhysicsInput;
-  export type CubismPhysicsInput = $.CubismPhysicsInput;
-  export const CubismPhysicsNormalization = $.CubismPhysicsNormalization;
-  export type CubismPhysicsNormalization = $.CubismPhysicsNormalization;
-  export const CubismPhysicsOutput = $.CubismPhysicsOutput;
-  export type CubismPhysicsOutput = $.CubismPhysicsOutput;
-  export const CubismPhysicsParameter = $.CubismPhysicsParameter;
-  export type CubismPhysicsParameter = $.CubismPhysicsParameter;
-  export const CubismPhysicsParticle = $.CubismPhysicsParticle;
-  export type CubismPhysicsParticle = $.CubismPhysicsParticle;
-  export const CubismPhysicsRig = $.CubismPhysicsRig;
-  export type CubismPhysicsRig = $.CubismPhysicsRig;
-  export const CubismPhysicsSource = $.CubismPhysicsSource;
-  export type CubismPhysicsSource = $.CubismPhysicsSource;
-  export const CubismPhysicsSubRig = $.CubismPhysicsSubRig;
-  export type CubismPhysicsSubRig = $.CubismPhysicsSubRig;
-  export const CubismPhysicsTargetType = $.CubismPhysicsTargetType;
-  export type CubismPhysicsTargetType = $.CubismPhysicsTargetType;
-  export const PhysicsJsonEffectiveForces = $.PhysicsJsonEffectiveForces;
-  export type PhysicsJsonEffectiveForces = $.PhysicsJsonEffectiveForces;
-  export type normalizedPhysicsParameterValueGetter = $.normalizedPhysicsParameterValueGetter;
-  export type physicsScaleGetter = $.physicsScaleGetter;
-  export type physicsValueGetter = $.physicsValueGetter;
-}
+

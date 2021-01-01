@@ -9,9 +9,6 @@ import { CubismIdHandle } from '../id/cubismid';
 import { CubismFramework } from '../live2dcubismframework';
 import { CubismJson } from '../utils/cubismjson';
 
-// Namespace definition for compatibility.
-import * as $ from './cubismmodeluserdatajson';
-
 const Meta = 'Meta';
 const UserDataCount = 'UserDataCount';
 const TotalUserDataSize = 'TotalUserDataSize';
@@ -109,9 +106,4 @@ export class CubismModelUserDataJson {
   }
 
   private _json: CubismJson;
-}
-// eslint-disable-next-line @typescript-eslint/no-namespace
-export namespace Live2DCubismFramework {
-  export const CubismModelUserDataJson = $.CubismModelUserDataJson;
-  export type CubismModelUserDataJson = $.CubismModelUserDataJson;
 }

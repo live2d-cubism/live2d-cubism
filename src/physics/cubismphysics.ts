@@ -20,8 +20,6 @@ import {
 } from './cubismphysicsinternal';
 import { CubismPhysicsJson } from './cubismphysicsjson';
 
-// Namespace definition for compatibility.
-import * as $ from './cubismphysics';
 
 // physics types tags.
 const PhysicsTypeTagX = 'X';
@@ -925,10 +923,4 @@ function normalizeParameterValue(
 
   return isInverted ? result : result * -1.0;
 }
-// eslint-disable-next-line @typescript-eslint/no-namespace
-export namespace Live2DCubismFramework {
-  export const CubismPhysics = $.CubismPhysics;
-  export type CubismPhysics = $.CubismPhysics;
-  export const Options = $.Options;
-  export type Options = $.Options;
-}
+

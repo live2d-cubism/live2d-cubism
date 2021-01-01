@@ -8,8 +8,6 @@
 /**
  * 文字列クラス。
  */
-// Namespace definition for compatibility.
-import * as $ from './csmstring';
 
 export class csmString {
   /**
@@ -99,9 +97,4 @@ export class csmString {
   }
 
   s: string;
-}
-// eslint-disable-next-line @typescript-eslint/no-namespace
-export namespace Live2DCubismFramework {
-  export const csmString = $.csmString;
-  export type csmString = $.csmString;
 }

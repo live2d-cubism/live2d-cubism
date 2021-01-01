@@ -7,9 +7,6 @@
 
 import { CubismLogDebug } from '../utils/cubismdebug';
 
-// Namespace definition for compatibility.
-import * as $ from './csmmap';
-
 /**
  * Key-Valueのペアを定義するクラス
  * csmMapクラスの内部データで使用する。
@@ -303,13 +300,4 @@ export class iterator<_KeyT, _ValT> {
 
   _index: number; // コンテナのインデックス値
   _map: csmMap<_KeyT, _ValT>; // コンテナ
-}
-// eslint-disable-next-line @typescript-eslint/no-namespace
-export namespace Live2DCubismFramework {
-  export const csmMap = $.csmMap;
-  export type csmMap<K, V> = $.csmMap<K, V>;
-  export const csmPair = $.csmPair;
-  export type csmPair<K, V> = $.csmPair<K, V>;
-  export const iterator = $.iterator;
-  export type iterator<K, V> = $.iterator<K, V>;
 }

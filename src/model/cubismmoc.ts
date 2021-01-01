@@ -8,9 +8,6 @@
 import { CSM_ASSERT } from '../utils/cubismdebug';
 import { CubismModel } from './cubismmodel';
 
-// Namespace definition for compatibility.
-import * as $ from './cubismmoc';
-
 /**
  * Mocデータの管理
  *
@@ -97,9 +94,4 @@ export class CubismMoc {
 
   _moc: Live2DCubismCore.Moc; // Mocデータ
   _modelCount: number; // Mocデータから作られたモデルの個数
-}
-// eslint-disable-next-line @typescript-eslint/no-namespace
-export namespace Live2DCubismFramework {
-  export const CubismMoc = $.CubismMoc;
-  export type CubismMoc = $.CubismMoc;
 }

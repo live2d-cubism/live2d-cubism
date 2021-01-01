@@ -8,9 +8,6 @@
 /**
  * ベクター型（可変配列型）
  */
-// Namespace definition for compatibility.
-import * as $ from './csmvector';
-
 export class csmVector<T> {
   /**
    * 引数付きコンストラクタ
@@ -342,11 +339,4 @@ export class iterator<T> {
 
   _index: number; // コンテナのインデックス値
   _vector: csmVector<T>; // コンテナ
-}
-// eslint-disable-next-line @typescript-eslint/no-namespace
-export namespace Live2DCubismFramework {
-  export const csmVector = $.csmVector;
-  export type csmVector<T> = $.csmVector<T>;
-  export const iterator = $.iterator;
-  export type iterator<T> = $.iterator<T>;
 }

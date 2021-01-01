@@ -12,8 +12,6 @@ import { csmVector } from '../type/csmvector';
 import { CSM_ASSERT } from '../utils/cubismdebug';
 import { CubismMotionQueueEntry } from './cubismmotionqueueentry';
 
-// Namespace definition for compatibility.
-import * as $ from './acubismmotion';
 
 /** モーション再生終了コールバック関数定義 */
 export type FinishedMotionCallback = (self: ACubismMotion) => void;
@@ -271,10 +269,4 @@ export abstract class ACubismMotion {
 
   // モーション再生終了コールバック関数
   public _onFinishedMotion?: FinishedMotionCallback;
-}
-// eslint-disable-next-line @typescript-eslint/no-namespace
-export namespace Live2DCubismFramework {
-  export const ACubismMotion = $.ACubismMotion;
-  export type ACubismMotion = $.ACubismMotion;
-  export type FinishedMotionCallback = $.FinishedMotionCallback;
 }
