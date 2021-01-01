@@ -8,6 +8,9 @@
 import { CubismMatrix44 } from '../math/cubismmatrix44';
 import { CubismModel } from '../model/cubismmodel';
 
+// Namespace definition for compatibility.
+import * as $ from './cubismrenderer';
+
 /**
  * モデル描画を処理するレンダラ
  *
@@ -261,9 +264,6 @@ export class CubismTextureColor {
   B: number; // 青チャンネル
   A: number; // αチャンネル
 }
-
-// Namespace definition for compatibility.
-import * as $ from './cubismrenderer';
 // eslint-disable-next-line @typescript-eslint/no-namespace
 export namespace Live2DCubismFramework {
   export const CubismBlendMode = $.CubismBlendMode;

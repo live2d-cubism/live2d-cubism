@@ -4,7 +4,7 @@
  * Use of this source code is governed by the Live2D Open Software license
  * that can be found at https://www.live2d.com/eula/live2d-open-software-license-agreement_en.html.
  */
-
+import '../core/live2dcubismcore';
 import { CubismIdManager } from './id/cubismidmanager';
 import { CubismRenderer } from './rendering/cubismrenderer';
 import {
@@ -13,6 +13,9 @@ import {
   CubismLogWarning
 } from './utils/cubismdebug';
 import { Value } from './utils/cubismjson';
+
+// Namespace definition for compatibility.
+import * as $ from './live2dcubismframework';
 
 export function strtod(s: string, endPtr: string[]): number {
   let index = 0;
@@ -265,9 +268,6 @@ export enum LogLevel {
   LogLevel_Error, // エラーログ
   LogLevel_Off // ログ出力無効
 }
-
-// Namespace definition for compatibility.
-import * as $ from './live2dcubismframework';
 // eslint-disable-next-line @typescript-eslint/no-namespace
 export namespace Live2DCubismFramework {
   export const Constant = $.Constant;

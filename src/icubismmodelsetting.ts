@@ -8,6 +8,9 @@
 import { CubismIdHandle } from './id/cubismid';
 import { csmMap } from './type/csmmap';
 
+// Namespace definition for compatibility.
+import * as $ from './icubismmodelsetting';
+
 /**
  * モデル設定情報を取り扱う関数を宣言した純粋仮想クラス。
  *
@@ -193,9 +196,6 @@ export abstract class ICubismModelSetting {
    */
   public abstract getLipSyncParameterId(index: number): CubismIdHandle;
 }
-
-// Namespace definition for compatibility.
-import * as $ from './icubismmodelsetting';
 // eslint-disable-next-line @typescript-eslint/no-namespace
 export namespace Live2DCubismFramework {
   export const ICubismModelSetting = $.ICubismModelSetting;

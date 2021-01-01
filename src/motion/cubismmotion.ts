@@ -25,6 +25,9 @@ import {
 import { CubismMotionJson } from './cubismmotionjson';
 import { CubismMotionQueueEntry } from './cubismmotionqueueentry';
 
+// Namespace definition for compatibility.
+import * as $ from './cubismmotion';
+
 const EffectNameEyeBlink = 'EyeBlink';
 const EffectNameLipSync = 'LipSync';
 const TargetNameModel = 'Model';
@@ -923,9 +926,6 @@ export class CubismMotion extends ACubismMotion {
   public _modelCurveIdEyeBlink: CubismIdHandle; // モデルが持つ自動まばたき用パラメータIDのハンドル。  モデルとモーションを対応付ける。
   public _modelCurveIdLipSync: CubismIdHandle; // モデルが持つリップシンク用パラメータIDのハンドル。  モデルとモーションを対応付ける。
 }
-
-// Namespace definition for compatibility.
-import * as $ from './cubismmotion';
 // eslint-disable-next-line @typescript-eslint/no-namespace
 export namespace Live2DCubismFramework {
   export const CubismMotion = $.CubismMotion;

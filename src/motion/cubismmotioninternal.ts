@@ -9,6 +9,9 @@ import { CubismIdHandle } from '../id/cubismid';
 import { csmString } from '../type/csmstring';
 import { csmVector } from '../type/csmvector';
 
+// Namespace definition for compatibility.
+import * as $ from './cubismmotioninternal';
+
 /**
  * @brief モーションカーブの種類
  *
@@ -133,9 +136,6 @@ export class CubismMotionData {
   points: csmVector<CubismMotionPoint>; // ポイントのリスト
   events: csmVector<CubismMotionEvent>; // イベントのリスト
 }
-
-// Namespace definition for compatibility.
-import * as $ from './cubismmotioninternal';
 // eslint-disable-next-line @typescript-eslint/no-namespace
 export namespace Live2DCubismFramework {
   export const CubismMotionCurve = $.CubismMotionCurve;

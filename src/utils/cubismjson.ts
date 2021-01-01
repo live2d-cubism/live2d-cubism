@@ -11,6 +11,9 @@ import { csmString } from '../type/csmstring';
 import { csmVector, iterator as csmVector_iterator } from '../type/csmvector';
 import { CubismLogInfo } from './cubismdebug';
 
+// Namespace definition for compatibility.
+import * as $ from './cubismjson';
+
 // StaticInitializeNotForClientCall()で初期化する
 const CSM_JSON_ERROR_TYPE_MISMATCH = 'Error: type mismatch';
 const CSM_JSON_ERROR_INDEX_OF_BOUNDS = 'Error: index out of bounds';
@@ -1227,9 +1230,6 @@ export class JsonMap extends Value {
   private _map: csmMap<string, Value>; // JSON要素の値
   private _keys: csmVector<string>; // JSON要素の値
 }
-
-// Namespace definition for compatibility.
-import * as $ from './cubismjson';
 // eslint-disable-next-line @typescript-eslint/no-namespace
 export namespace Live2DCubismFramework {
   export const CubismJson = $.CubismJson;

@@ -1,5 +1,6 @@
 {
-  "private": true,
+  "name": "live2d-cubism",
+  "version": "0.1.0",
   "scripts": {
     "build": "tsc",
     "test": "tsc --noEmit",

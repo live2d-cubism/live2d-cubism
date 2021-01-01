@@ -10,6 +10,9 @@
  *         デフォルト値の仕様は以下のマニュアルに基づく<br>
  *         https://docs.live2d.com/cubism-editor-manual/standard-parametor-list/
  */
+// Namespace definition for compatibility.
+import * as $ from './cubismdefaultparameterid';
+
 export const CubismDefaultParameterId = Object.freeze<{
   [key: string]: string;
 }>({
@@ -64,9 +67,6 @@ export const CubismDefaultParameterId = Object.freeze<{
   ParamBaseY: 'ParamBaseY',
   ParamNONE: 'NONE:'
 });
-
-// Namespace definition for compatibility.
-import * as $ from './cubismdefaultparameterid';
 // eslint-disable-next-line @typescript-eslint/no-namespace
 export namespace Live2DCubismFramework {
   export const HitAreaBody = $.CubismDefaultParameterId.HitAreaBody;

@@ -9,6 +9,9 @@ import { csmString } from '../type/csmstring';
 import { csmVector } from '../type/csmvector';
 import { CubismId } from './cubismid';
 
+// Namespace definition for compatibility.
+import * as $ from './cubismidmanager';
+
 /**
  * ID名の管理
  *
@@ -111,9 +114,6 @@ export class CubismIdManager {
 
   private _ids: csmVector<CubismId>; // 登録されているIDのリスト
 }
-
-// Namespace definition for compatibility.
-import * as $ from './cubismidmanager';
 // eslint-disable-next-line @typescript-eslint/no-namespace
 export namespace Live2DCubismFramework {
   export const CubismIdManager = $.CubismIdManager;

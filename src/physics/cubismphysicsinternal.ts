@@ -9,6 +9,9 @@ import { CubismIdHandle } from '../id/cubismid';
 import { CubismVector2 } from '../math/cubismvector2';
 import { csmVector } from '../type/csmvector';
 
+// Namespace definition for compatibility.
+import * as $ from './cubismphysicsinternal';
+
 /**
  * 物理演算の適用先の種類
  */
@@ -218,9 +221,6 @@ export class CubismPhysicsRig {
   gravity: CubismVector2; // 重力
   wind: CubismVector2; // 風
 }
-
-// Namespace definition for compatibility.
-import * as $ from './cubismphysicsinternal';
 // eslint-disable-next-line @typescript-eslint/no-namespace
 export namespace Live2DCubismFramework {
   export const CubismPhysicsInput = $.CubismPhysicsInput;

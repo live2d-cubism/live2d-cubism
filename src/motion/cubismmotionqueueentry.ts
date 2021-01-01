@@ -8,6 +8,9 @@
 import { ACubismMotion } from './acubismmotion';
 import { CubismMotionQueueEntryHandle } from './cubismmotionqueuemanager';
 
+// Namespace definition for compatibility.
+import * as $ from './cubismmotionqueueentry';
+
 /**
  * CubismMotionQueueManagerで再生している各モーションの管理クラス。
  */
@@ -243,9 +246,6 @@ export class CubismMotionQueueEntry {
 
   _motionQueueEntryHandle: CubismMotionQueueEntryHandle; // インスタンスごとに一意の値を持つ識別番号
 }
-
-// Namespace definition for compatibility.
-import * as $ from './cubismmotionqueueentry';
 // eslint-disable-next-line @typescript-eslint/no-namespace
 export namespace Live2DCubismFramework {
   export const CubismMotionQueueEntry = $.CubismMotionQueueEntry;

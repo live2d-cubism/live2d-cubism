@@ -7,6 +7,9 @@
 
 import { CubismMath } from './cubismmath';
 
+// Namespace definition for compatibility.
+import * as $ from './cubismtargetpoint';
+
 const FrameRate = 30;
 const Epsilon = 0.01;
 
@@ -159,9 +162,6 @@ export class CubismTargetPoint {
   private _lastTimeSeconds: number; // 最後の実行時間[秒]
   private _userTimeSeconds: number; // デルタ時間の積算値[秒]
 }
-
-// Namespace definition for compatibility.
-import * as $ from './cubismtargetpoint';
 // eslint-disable-next-line @typescript-eslint/no-namespace
 export namespace Live2DCubismFramework {
   export const CubismTargetPoint = $.CubismTargetPoint;

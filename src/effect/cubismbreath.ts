@@ -9,6 +9,9 @@ import { CubismIdHandle } from '../id/cubismid';
 import { CubismModel } from '../model/cubismmodel';
 import { csmVector } from '../type/csmvector';
 
+// Namespace definition for compatibility.
+import * as $ from './cubismbreath';
+
 /**
  * 呼吸機能
  *
@@ -112,9 +115,6 @@ export class BreathParameterData {
   cycle: number; // 呼吸を正弦波としたときの、波の周期
   weight: number; // パラメータへの重み
 }
-
-// Namespace definition for compatibility.
-import * as $ from './cubismbreath';
 // eslint-disable-next-line @typescript-eslint/no-namespace
 export namespace Live2DCubismFramework {
   export const BreathParameterData = $.BreathParameterData;

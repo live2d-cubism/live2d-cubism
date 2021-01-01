@@ -10,6 +10,9 @@ import { CubismFramework } from '../live2dcubismframework';
 import { csmString } from '../type/csmstring';
 import { CubismJson } from '../utils/cubismjson';
 
+// Namespace definition for compatibility.
+import * as $ from './cubismmotionjson';
+
 // JSON keys
 const Meta = 'Meta';
 const Duration = 'Duration';
@@ -351,9 +354,6 @@ export class CubismMotionJson {
 
   _json: CubismJson; // motion3.jsonのデータ
 }
-
-// Namespace definition for compatibility.
-import * as $ from './cubismmotionjson';
 // eslint-disable-next-line @typescript-eslint/no-namespace
 export namespace Live2DCubismFramework {
   export const CubismMotionJson = $.CubismMotionJson;

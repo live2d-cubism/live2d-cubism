@@ -12,6 +12,9 @@ import {
   CubismMotionQueueManager
 } from './cubismmotionqueuemanager';
 
+// Namespace definition for compatibility.
+import * as $ from './cubismmotionmanager';
+
 /**
  * モーションの管理
  *
@@ -116,9 +119,6 @@ export class CubismMotionManager extends CubismMotionQueueManager {
   _currentPriority: number; // 現在再生中のモーションの優先度
   _reservePriority: number; // 再生予定のモーションの優先度。再生中は0になる。モーションファイルを別スレッドで読み込むときの機能。
 }
-
-// Namespace definition for compatibility.
-import * as $ from './cubismmotionmanager';
 // eslint-disable-next-line @typescript-eslint/no-namespace
 export namespace Live2DCubismFramework {
   export const CubismMotionManager = $.CubismMotionManager;

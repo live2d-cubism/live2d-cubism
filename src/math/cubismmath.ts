@@ -7,6 +7,9 @@
 
 import { CubismVector2 } from './cubismvector2';
 
+// Namespace definition for compatibility.
+import * as $ from './cubismmath';
+
 /**
  * 数値計算などに使用するユーティリティクラス
  */
@@ -190,9 +193,6 @@ export class CubismMath {
    */
   private constructor() {}
 }
-
-// Namespace definition for compatibility.
-import * as $ from './cubismmath';
 // eslint-disable-next-line @typescript-eslint/no-namespace
 export namespace Live2DCubismFramework {
   export const CubismMath = $.CubismMath;

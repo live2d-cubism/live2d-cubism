@@ -12,6 +12,9 @@ import { csmMap } from '../type/csmmap';
 import { csmVector } from '../type/csmvector';
 import { CSM_ASSERT } from '../utils/cubismdebug';
 
+// Namespace definition for compatibility.
+import * as $ from './cubismmodel';
+
 /**
  * モデル
  *
@@ -808,9 +811,6 @@ export class CubismModel {
   private _partIds: csmVector<CubismIdHandle>;
   private _drawableIds: csmVector<CubismIdHandle>;
 }
-
-// Namespace definition for compatibility.
-import * as $ from './cubismmodel';
 // eslint-disable-next-line @typescript-eslint/no-namespace
 export namespace Live2DCubismFramework {
   export const CubismModel = $.CubismModel;

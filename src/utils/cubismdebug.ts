@@ -15,6 +15,9 @@ import {
 } from '../cubismframeworkconfig';
 import { CubismFramework, LogLevel } from '../live2dcubismframework';
 
+// Namespace definition for compatibility.
+import * as $ from './cubismdebug';
+
 export const CubismLogPrint = (level: LogLevel, fmt: string, args: any[]) => {
   CubismDebug.print(level, '[CSM]' + fmt, args);
 };
@@ -152,9 +155,6 @@ export class CubismDebug {
    */
   private constructor() {}
 }
-
-// Namespace definition for compatibility.
-import * as $ from './cubismdebug';
 // eslint-disable-next-line @typescript-eslint/no-namespace
 export namespace Live2DCubismFramework {
   export const CubismDebug = $.CubismDebug;

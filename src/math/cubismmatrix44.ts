@@ -10,6 +10,9 @@
  *
  * 4x4行列の便利クラス。
  */
+// Namespace definition for compatibility.
+import * as $ from './cubismmatrix44';
+
 export class CubismMatrix44 {
   /**
    * コンストラクタ
@@ -304,9 +307,6 @@ export class CubismMatrix44 {
 
   protected _tr: Float32Array; // 4x4行列データ
 }
-
-// Namespace definition for compatibility.
-import * as $ from './cubismmatrix44';
 // eslint-disable-next-line @typescript-eslint/no-namespace
 export namespace Live2DCubismFramework {
   export const CubismMatrix44 = $.CubismMatrix44;

@@ -10,6 +10,9 @@ import { CubismIdHandle } from '../id/cubismid';
 import { CubismModel } from '../model/cubismmodel';
 import { csmVector } from '../type/csmvector';
 
+// Namespace definition for compatibility.
+import * as $ from './cubismeyeblink';
+
 /**
  * 自動まばたき機能
  *
@@ -221,9 +224,6 @@ export enum EyeState {
   EyeState_Closed, // まぶたが閉じている状態
   EyeState_Opening // まぶたが開いていく途中の状態
 }
-
-// Namespace definition for compatibility.
-import * as $ from './cubismeyeblink';
 // eslint-disable-next-line @typescript-eslint/no-namespace
 export namespace Live2DCubismFramework {
   export const CubismEyeBlink = $.CubismEyeBlink;

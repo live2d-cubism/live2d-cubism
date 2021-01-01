@@ -10,6 +10,9 @@ import { CubismFramework } from '../live2dcubismframework';
 import { CubismVector2 } from '../math/cubismvector2';
 import { CubismJson } from '../utils/cubismjson';
 
+// Namespace definition for compatibility.
+import * as $ from './cubismphysicsjson';
+
 // JSON keys
 const Position = 'Position';
 const X = 'X';
@@ -638,9 +641,6 @@ export class CubismPhysicsJson {
 
   _json: CubismJson; // physics3.jsonデータ
 }
-
-// Namespace definition for compatibility.
-import * as $ from './cubismphysicsjson';
 // eslint-disable-next-line @typescript-eslint/no-namespace
 export namespace Live2DCubismFramework {
   export const CubismPhysicsJson = $.CubismPhysicsJson;

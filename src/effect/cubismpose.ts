@@ -11,6 +11,9 @@ import { CubismModel } from '../model/cubismmodel';
 import { csmVector, iterator } from '../type/csmvector';
 import { CubismJson, Value } from '../utils/cubismjson';
 
+// Namespace definition for compatibility.
+import * as $ from './cubismpose';
+
 const Epsilon = 0.001;
 const DefaultFadeInSeconds = 0.5;
 
@@ -388,9 +391,6 @@ export class PartData {
   partIndex: number; // パーツのインデックス
   link: csmVector<PartData>; // 連動するパラメータ
 }
-
-// Namespace definition for compatibility.
-import * as $ from './cubismpose';
 // eslint-disable-next-line @typescript-eslint/no-namespace
 export namespace Live2DCubismFramework {
   export const CubismPose = $.CubismPose;

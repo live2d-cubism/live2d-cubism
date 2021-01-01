@@ -11,6 +11,9 @@ import { csmString } from '../type/csmstring';
 import { csmVector } from '../type/csmvector';
 import { CubismModelUserDataJson } from './cubismmodeluserdatajson';
 
+// Namespace definition for compatibility.
+import * as $ from './cubismmodeluserdata';
+
 const ArtMesh = 'ArtMesh';
 
 /**
@@ -124,9 +127,6 @@ export class CubismModelUserData {
   private _userDataNodes: csmVector<CubismModelUserDataNode>; // ユーザーデータ構造体配列
   private _artMeshUserDataNode: csmVector<CubismModelUserDataNode>; // 閲覧リストの保持
 }
-
-// Namespace definition for compatibility.
-import * as $ from './cubismmodeluserdata';
 // eslint-disable-next-line @typescript-eslint/no-namespace
 export namespace Live2DCubismFramework {
   export const CubismModelUserData = $.CubismModelUserData;
